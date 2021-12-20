@@ -20,6 +20,7 @@ namespace Cadastro
                         ListarSeries();
                         break;
                     case "3":
+                        VisualizarSerie();
                         break;
                     case "4":
                         break;
@@ -83,6 +84,16 @@ namespace Cadastro
 
                     Console.WriteLine("#ID {0}: - {1} {2}", serie.RetornaId(), serie.RetornaTitulo(), excluido ? "*Excluído*" : "");
                 }
+            }
+
+            static void VisualizarSerie()
+            {
+                Console.Write("Digite o id da série: ");
+                int indiceSerie = int.Parse(Console.ReadLine());
+
+                var serie = repositorio.RetornaPorId(indiceSerie);
+
+                Console.WriteLine(serie);
             }
 
             static string ObterOpcaoUsuario()
