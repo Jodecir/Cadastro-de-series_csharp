@@ -7,7 +7,7 @@ namespace Cadastro
         private static readonly SerieRepositorio repositorio = new();
         private static void Main()
         {
-                    string opcaoUsuario = ObterOpcaoUsuario();
+            string opcaoUsuario = ObterOpcaoUsuario();
 
             while (!string.Equals(opcaoUsuario, "X", StringComparison.OrdinalIgnoreCase))
             {
